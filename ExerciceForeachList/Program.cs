@@ -18,6 +18,26 @@ namespace ExerciceForeachList
                 Console.WriteLine($"Hola  { hola }");
             }
             Console.ReadLine();
+
+            List<PersonModel> nomcognom = nombreiapellido();
+            foreach(PersonModel hola in nomcognom)
+            {
+                Console.WriteLine($"Hola  { hola.FirstName } {hola.LastName}");
+            }
+
+            Console.ReadLine();
+        }
+
+        static List<PersonModel> nombreiapellido()
+        {
+            List<PersonModel> nom = new List<PersonModel>();
+
+            nom.Add(new PersonModel { FirstName = "Tim", LastName = "Corey"});
+            nom.Add(new PersonModel { FirstName = "Bill", LastName = "McCoy"});
+            nom.Add(new PersonModel { FirstName = "Mary", LastName = "Jones"});
+            nom.Add(new PersonModel { FirstName = "Sue", LastName = "Smith"});
+
+            return nom;
         }
 
         static List<string> AñadirPersona()
