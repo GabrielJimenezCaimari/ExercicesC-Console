@@ -19,16 +19,15 @@ namespace ExerciceForeachList
             }
             Console.ReadLine();
 
-            List<PersonModel> nomcognom = nombreiapellido();
+            List<PersonModel> nomcognom = NombreiApellido();
             foreach(PersonModel hola in nomcognom)
             {
                 Console.WriteLine($"Hola  { hola.FirstName } {hola.LastName}");
             }
-
             Console.ReadLine();
         }
 
-        static List<PersonModel> nombreiapellido()
+        static List<PersonModel> NombreiApellido()
         {
             List<PersonModel> nom = new List<PersonModel>();
 
