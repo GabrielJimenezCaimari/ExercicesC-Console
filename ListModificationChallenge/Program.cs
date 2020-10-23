@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -192,8 +193,7 @@ namespace ListModificationChallenge
             PersonModel newPerson = new PersonModel { FirstName = "Greg", LastName = "Brown" };
 
             // TODO: Add a record to the end of the incoming list
-        
-
+            people.Add(newPerson);
         }
 
         private static void InsertRecordFirstIntoList(List<PersonModel> people)
@@ -201,7 +201,7 @@ namespace ListModificationChallenge
             PersonModel newPerson = new PersonModel { FirstName = "Greg", LastName = "Brown" };
 
             // TODO: Add a record to the beginning of the incoming list
-
+            people.Insert(0, newPerson);
         }
 
         private static void InsertRecordInTheMiddleOfTheList(List<PersonModel> people)
@@ -209,12 +209,23 @@ namespace ListModificationChallenge
             PersonModel newPerson = new PersonModel { FirstName = "Greg", LastName = "Brown" };
 
             // TODO: Add a record after Paul Jones in the incoming list
+            int index = 0;
+            for(int i = 0; i < people.Count; i++)
+            {
+                if(people[i].FirstName == "Paul" && people[i].LastName == "Jones")
+                {
+                    index = i + 1;
+                }
+            }
+
+            people.Insert(index, newPerson);
 
         }
 
         private static void SortAList(List<PersonModel> people)
         {
             // TODO: Sort the incoming list values by fullname (ascending)
+            people.Sort((x, y) => string.Compare(x.FullName, y.FullName));
         }
         #endregion
 
