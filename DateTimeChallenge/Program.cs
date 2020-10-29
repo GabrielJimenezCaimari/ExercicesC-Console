@@ -12,7 +12,7 @@ namespace DateTimeChallenge
         {
             //Basic Challenge
             //Pedir dia
-            /*Console.Write("Introduce una fecha(formato M/d/yy): ");
+            Console.Write("Introduce una fecha(formato M/d/yy): ");
             string diaresta = Console.ReadLine();
             DateTime dateresta = DateTime.ParseExact(diaresta, "M/d/yy", null);
             TimeSpan calculo = DateTime.Now.Subtract(dateresta);
@@ -31,11 +31,7 @@ namespace DateTimeChallenge
             DateTime timeresta = DateTime.ParseExact(horaresta, "H:mm", null);
             TimeSpan calculohora = DateTime.Now.Subtract(timeresta);
             Console.WriteLine($"Han pasado {calculohora.Hours} horas y {calculohora.Minutes} minutos");
-            */
             //Bonus Challenge
-            Console.Write("Pulse 1 para formato () o pulse 2 para formato ()");
-            int i = Int32.Parse(Console.ReadLine());
-            Console.WriteLine(i);
 
             Console.ReadLine();
         }
